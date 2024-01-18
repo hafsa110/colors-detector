@@ -1,10 +1,13 @@
+// App.js
 import React from 'react';
+import ImageUploader from './ImageUploader';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1 style={{ color: 'pink' }}>Hello World</h1>
+      <h1>Image Uploader</h1>
+      <ImageUploader />
     </div>
   );
 }
