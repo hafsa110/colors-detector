@@ -1,9 +1,16 @@
 /* ImageUploader.css */
 .image-uploader {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     margin-top: 20px;
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+  }
+  
+  .image-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px; /* Ajoute un léger padding à gauche */
   }
   
   .upload-label {
@@ -13,16 +20,38 @@
     cursor: pointer;
     border-radius: 5px;
     font-size: 16px;
+    margin-bottom: 10px;
   }
   
   #upload-input {
     display: none;
   }
   
+  .image-container {
+    width: 70vw; /* Fixe la largeur à 70 pixels */
+    height: 70vh; /* Fixe la hauteur à 70 pixels */
+    overflow: hidden;
+    position: relative;
+  }
+  
   .uploaded-image {
-    margin-top: 20px;
-    max-width: 100%;
+    width: auto;
+    height: 100%;
+    object-fit: cover; /* Utilise cover pour remplir complètement le cadre en coupant l'image si nécessaire */
+    border: 1px solid black; /* Ajoute un cadre noir autour de l'image */
+  }
+  
+  .color-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .selected-color {
+    width: 50px;
+    height: 50px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
   }
   
